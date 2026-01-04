@@ -1,23 +1,23 @@
-/* ===== RESET ===== */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
-/* ===== BODY ===== */
+/* BODY */
 body {
   background: #0f172a;
   color: #e5e7eb;
   line-height: 1.7;
 }
 
-/* ===== NAVBAR ===== */
+/* NAV */
 .nav {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 25px;
   padding: 18px;
   background: #020617;
   border-bottom: 1px solid #1e293b;
@@ -34,20 +34,21 @@ body {
   color: #38bdf8;
 }
 
-/* ===== HERO ===== */
+/* HERO */
 .hero {
-  padding: 90px 20px;
   text-align: center;
-  background: radial-gradient(circle at top, #1e40af, #020617);
+  padding: 90px 20px;
+  background: radial-gradient(circle at top, #1e3a8a, #020617);
 }
 
 .hero h1 {
   font-size: 42px;
   margin-bottom: 15px;
+  color: #fff;
 }
 
 .hero p {
-  max-width: 620px;
+  max-width: 700px;
   margin: auto;
   font-size: 18px;
   color: #cbd5f5;
@@ -69,30 +70,26 @@ body {
   background: #0ea5e9;
 }
 
-/* ===== SECTIONS ===== */
+/* SECTION */
 .section {
-  padding: 80px 20px;
-  max-width: 1100px;
-  margin: auto;
+  padding: 60px 20px;
   text-align: center;
 }
 
-.section h2 {
-  font-size: 32px;
-  margin-bottom: 40px;
-}
-
-/* ===== CARDS ===== */
+/* SERVICES CARDS */
 .cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 30px;
+  flex-wrap: wrap;
 }
 
 .card {
-  background: #020617;
-  padding: 30px;
+  background: #1e293b;
+  padding: 22px;
   border-radius: 12px;
+  width: 280px;
   border: 1px solid #1e293b;
   transition: 0.3s;
 }
@@ -106,27 +103,32 @@ body {
   margin-bottom: 10px;
 }
 
-/* ===== LISTS ===== */
-ul, ol {
+/* STEPS LIST */
+.steps {
   max-width: 600px;
   margin: auto;
+  list-style: none;
+  font-size: 18px;
   text-align: left;
 }
 
-li {
-  margin-bottom: 12px;
+.steps li {
+  margin: 15px 0;
+  padding-left: 8px;
+  border-left: 3px solid #38bdf8;
 }
 
-/* ===== FOOTER ===== */
+/* FOOTER */
 footer {
   background: #020617;
-  padding: 30px;
+  padding: 30px 15px;
   text-align: center;
   border-top: 1px solid #1e293b;
-  margin-top: 80px;
 }
 
 footer p {
   color: #94a3b8;
   font-size: 14px;
+  margin: 4px 0;
 }
+
