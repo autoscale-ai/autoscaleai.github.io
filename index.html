@@ -422,5 +422,23 @@ Schedule a Tech Call
 
   console.log("Firebase connected successfully");
 </script>
+  <script>
+function saveLead(name, email, message) {
+  db.collection("leads").add({
+    name: name,
+    email: email,
+    message: message,
+    createdAt: firebase.firestore.FieldValue.serverTimestamp()
+  })
+  .then(() => {
+    alert("Thank you! We will contact you shortly.");
+  })
+  .catch((error) => {
+    alert("Error saving data");
+    console.error(error);
+  });
+}
+</script>
+
 </body>
 </html>
