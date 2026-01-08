@@ -168,3 +168,9 @@ footer a {
   font-size: 14px;
   text-decoration: none;
 }
+
+.trust p {
+  color: #cbd5f5;
+  margin-top: 10px;
+  font-size: 16px;
+}
