@@ -2,26 +2,48 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Sign Up — AutoScale AI</title>
+  <title>Request Access — AutoScale AI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
+<nav class="nav">
+  <div class="nav-left">
+    <a href="index.html" class="logo">AutoScale AI</a>
+  </div>
+</nav>
+
 <section class="section">
-  <h2>Create Your Account</h2>
+  <h2>Request Access</h2>
 
-  <form>
-    <input type="text" placeholder="Full Name" required>
-    <input type="email" placeholder="Email" required>
-    <input type="password" placeholder="Password" required>
+  <p style="max-width:600px;margin:10px auto;">
+    Our systems are available for businesses that are a good fit.
+    Submit your details and our team will review your request.
+  </p>
 
-    <button class="btn" type="submit">Sign Up</button>
-  </form>
-<div style="margin:15px 0;">
-  <input type="checkbox" required> I’m not a robot
-</div>
+  <div class="card" style="max-width:450px;margin:30px auto;">
+    <form>
+      <input type="text" placeholder="Full Name" required
+        style="width:100%;padding:12px;margin-bottom:15px;border-radius:6px;border:none;">
 
-  <p>Already have an account? <a href="login.html">Login</a></p>
+      <input type="email" placeholder="Email Address" required
+        style="width:100%;padding:12px;margin-bottom:15px;border-radius:6px;border:none;">
+
+      <input type="text" placeholder="Company / Brand Name"
+        style="width:100%;padding:12px;margin-bottom:20px;border-radius:6px;border:none;">
+
+      <button type="submit" class="btn" style="width:100%;">
+        Request Access
+      </button>
+    </form>
+
+    <p style="margin-top:15px;font-size:14px;color:#94a3b8;">
+      Already have access?
+      <a href="login.html" style="color:#38bdf8;">Login here</a>
+    </p>
+  </div>
 </section>
 
 </body>
