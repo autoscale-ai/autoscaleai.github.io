@@ -404,5 +404,23 @@ Schedule a Tech Call
 
 
 <script src="//code.tidio.co/fxkcjb63wkagyvlf4ylbn4woxtbw8sm4.js" async></script>
+  <script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+  import { getFirestore } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyD65AdWBjfQd6mq9kddH-CPIHnyURxlh8M",
+    authDomain: "autoscale-ai-7ba19.firebaseapp.com",
+    projectId: "autoscale-ai-7ba19",
+    storageBucket: "autoscale-ai-7ba19.firebasestorage.app",
+    messagingSenderId: "83492889164",
+    appId: "1:83492889164:web:29ff7d38bde24cb4cd4ae9"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  console.log("Firebase connected successfully");
+</script>
 </body>
 </html>
