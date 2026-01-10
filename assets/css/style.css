@@ -13,7 +13,7 @@ body {
   line-height: 1.6;
 }
 
-/* NAVBAR */
+/* ================= NAVBAR ================= */
 .nav {
   display: flex;
   justify-content: space-between;
@@ -21,6 +21,7 @@ body {
   padding: 16px 40px;
   background: #020617;
   border-bottom: 1px solid #1e293b;
+  flex-wrap: wrap;
 }
 
 .nav a {
@@ -56,7 +57,7 @@ body {
   transform: translateY(-2px);
 }
 
-/* HERO */
+/* ================= HERO ================= */
 .hero {
   text-align: center;
   padding: 90px 20px;
@@ -65,18 +66,23 @@ body {
 
 .hero h1 {
   font-size: 44px;
-  margin-bottom: 15px;
+  margin-bottom: 16px;
   color: #ffffff;
 }
 
 .hero p {
   max-width: 720px;
-  margin: 0 auto 10px;
+  margin: 0 auto 14px;
   font-size: 18px;
   color: #cbd5f5;
 }
 
-/* SECTION */
+/* HERO BUTTON FIX */
+.hero .btn {
+  margin: 10px;
+}
+
+/* ================= SECTIONS ================= */
 .section {
   padding: 70px 20px;
   text-align: center;
@@ -92,7 +98,7 @@ body {
   color: #cbd5f5;
 }
 
-/* CARDS */
+/* ================= CARDS ================= */
 .cards,
 .pricing-cards {
   display: flex;
@@ -117,51 +123,16 @@ body {
   border-color: #38bdf8;
 }
 
-.card h3 {
-  margin-bottom: 10px;
-}
-
-.card h1 {
-  font-size: 36px;
-  margin: 10px 0;
-}
-
-.card ul {
-  list-style: none;
-  margin: 15px 0;
-}
-
-.card ul li {
-  margin: 8px 0;
-  font-size: 15px;
-}
-
-/* STEPS */
-.steps {
-  max-width: 600px;
-  margin: 25px auto;
-  list-style: none;
-  text-align: left;
-}
-
-.steps li {
-  margin: 12px 0;
-  padding-left: 10px;
-  border-left: 3px solid #38bdf8;
-}
-
-/* ========================= */
-/* FOUNDER + CEO (FIXED) */
-/* ========================= */
+/* ================= FOUNDER & CEO ================= */
 .founder-section,
 .ceo-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   text-align: center;
   margin: 80px auto;
   max-width: 800px;
+  padding: 0 15px;
 }
 
 .founder-section img,
@@ -171,23 +142,17 @@ body {
   border-radius: 50%;
   object-fit: cover;
   border: 4px solid #38bdf8;
-  margin-bottom: 18px;
-}
-
-.founder-section h3,
-.ceo-section h3 {
-  font-size: 22px;
-  margin-bottom: 6px;
+  margin: 28px 0; /* CLEAN SPACING */
 }
 
 .founder-section p,
 .ceo-section p {
   max-width: 520px;
   color: #cbd5f5;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
-/* TRUST CARDS */
+/* ================= TRUST ================= */
 .trust-cards {
   display: flex;
   justify-content: center;
@@ -204,7 +169,7 @@ body {
   text-align: center;
 }
 
-/* FOOTER */
+/* ================= FOOTER ================= */
 footer {
   background: #020617;
   padding: 35px 15px;
@@ -219,99 +184,18 @@ footer a {
   text-decoration: none;
 }
 
-footer a:hover {
-  color: #38bdf8;
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-  .nav {
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  .hero h1 {
-    font-size: 34px;
-  }
-
-  .card {
-    width: 100%;
-    max-width: 340px;
-  }
-}
-/* === FOUNDER CENTER FIX === */
-.founder-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.founder-section .role {
-  color: #94a3b8;
-  margin-bottom: 25px;
-}
-
-.profile-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.profile-card img {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 4px solid #38bdf8;
-  margin-bottom: 18px;
-}
-
-.profile-card .bio {
-  max-width: 520px;
-  color: #cbd5f5;
-  line-height: 1.6;
-}
-/* Founder section spacing fix */
-.founder-section {
-  margin-top: 60px;
-  margin-bottom: 60px;
-}
-
-.founder-section h2 {
-  margin-bottom: 12px;
-}
-
-.founder-section h4,
-.founder-section h5 {
-  margin-bottom: 20px;
-}
-
-.founder-section img {
-  margin: 22px 0;   /* image ke upar & neeche space */
-}
-
-.founder-section p {
-  margin-top: 18px;
-  line-height: 1.7;
-}
-/* ===== MOBILE RESPONSIVE FIX ===== */
+/* ================= MOBILE FIX ================= */
 @media (max-width: 768px) {
 
-  /* NAV */
+  /* NAV FIX */
   .nav {
     flex-direction: column;
     padding: 14px 20px;
-    gap: 10px;
+    gap: 12px;
   }
 
-  .nav-left,
-  .nav-right {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
+  .nav a {
+    margin-right: 0;
   }
 
   /* HERO */
@@ -328,18 +212,17 @@ footer a:hover {
     font-size: 16px;
   }
 
-  /* HERO BUTTONS */
-  .hero a.btn {
+  /* HERO BUTTONS STACK */
+  .hero .btn {
     width: 100%;
     max-width: 320px;
-    margin: 8px auto;
     display: block;
-    text-align: center;
+    margin: 10px auto;
   }
 
   /* CARDS */
-  .pricing-cards,
-  .cards {
+  .cards,
+  .pricing-cards {
     flex-direction: column;
     align-items: center;
   }
@@ -352,7 +235,6 @@ footer a:hover {
   /* FOUNDER & CEO */
   .founder-section,
   .ceo-section {
-    padding: 40px 15px;
+    margin: 60px auto;
   }
-
 }
