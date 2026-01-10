@@ -10,7 +10,17 @@
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
+<!-- HUMAN VERIFICATION OVERLAY -->
+<div id="human-check">
+  <div class="human-box">
+    <h2>Verify You Are Human</h2>
+    <p>Please confirm you are not a robot to continue.</p>
 
+    <div class="g-recaptcha" data-sitekey="6LeCdEYsAAAAAI2GgsR_rDqbaxSF0AWf6cXElPPO"></div>
+
+    <button onclick="unlockSite()" class="btn">Enter Website</button>
+  </div>
+</div>
 <!-- NAV -->
 <nav class="nav">
   <div class="nav-left">
@@ -483,7 +493,7 @@ Schedule a Tech Call
     Book a Free Strategy Call
   </a>
 <div style="margin-top:20px;">
-  <div class="g-recaptcha" data-sitekey="6LcZe0QsAAAAAHpPguQNbgta07hfRqKeM6iB_nLD"></div>
+  
 </div>
 
   <p style="margin-top:10px;font-size:14px;color:#94a3b8;">
