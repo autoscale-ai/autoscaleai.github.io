@@ -626,36 +626,6 @@ function saveLead(name, email, message) {
   });
 }
 </script>
-<!-- COOKIE CONSENT -->
-<div id="cookie-banner">
-  <p>
-    We use cookies to improve your experience, analyze traffic, and personalize content.
-    <a href="#" target="_blank">Learn more</a>
-  </p>
-  <div class="cookie-actions">
-    <button id="accept-cookies">Accept</button>
-    <button id="decline-cookies">Decline</button>
-  </div>
-</div>
-<script>
-  const banner = document.getElementById("cookie-banner");
-  const acceptBtn = document.getElementById("accept-cookies");
-  const declineBtn = document.getElementById("decline-cookies");
-
-  if (!localStorage.getItem("cookiesAccepted")) {
-    banner.style.display = "block";
-  }
-
-  acceptBtn.onclick = () => {
-    localStorage.setItem("cookiesAccepted", "yes");
-    banner.style.display = "none";
-  };
-
-  declineBtn.onclick = () => {
-    localStorage.setItem("cookiesAccepted", "no");
-    banner.style.display = "none";
-  };
-</script>
 <script>
 function unlockSite() {
   const response = grecaptcha.getResponse();
