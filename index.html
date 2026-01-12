@@ -696,18 +696,6 @@ function unlockSite(){
   document.getElementById("human-check").style.display="none";
 }
 </script>
-<script>
-function toggleServices() {
-  document.getElementById("servicesMenu").classList.toggle("show");
-}
-
-document.addEventListener("click", function(e){
-  const menu = document.getElementById("servicesMenu");
-  if (!e.target.closest(".nav-dropdown")) {
-    menu.classList.remove("show");
-  }
-});
-</script>
 
 </body>
 </html>
