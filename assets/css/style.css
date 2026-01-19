@@ -1614,3 +1614,9 @@ section .btn {
   position: absolute;
   z-index: 0;
 }
+/* FIX: Login button text visibility in navbar */
+.navbar .login-btn,
+.navbar a.login,
+.navbar button.login {
+  color: #000 !important;   /* black text */
+}
