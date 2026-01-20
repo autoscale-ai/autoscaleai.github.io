@@ -16,18 +16,18 @@
 
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
-<body>
+<body class="locked">
 
 <!-- ================= HUMAN CHECK ================= -->
 <div id="human-check">
   <div class="human-box">
     <h2>Verify You Are Human</h2>
-    <div 
-  class="g-recaptcha" 
-  data-sitekey="6LeCdEYsAAAAAI2GgsR_rDqbaxSF0AWf6cXElPPO"
-  data-callback="onHumanVerified">
+ <div id="captcha-box">
+  <div class="g-recaptcha"
+       data-sitekey="6LeCdEYsAAAAAI2GgsR_rDqbaxSF0AWf6cXElPPO"
+       data-callback="onHumanVerified">
+  </div>
 </div>
-   <button class="btn" onclick="unlockSite()">Enter Website</button>
   </div>
 </div>
 <!--navigation bar-->
@@ -718,6 +718,30 @@ window.addEventListener("load", () => {
 });
 </script>
 
+</script>
+<script>
+function onHumanVerified() {
+  const expiryTime = Date.now() + (24 * 60 * 60 * 1000); // 24 hours
+
+  localStorage.setItem("human_verified", "true");
+  localStorage.setItem("human_verified_expiry", expiryTime);
+
+  document.getElementById("captcha-box").style.display = "none";
+  document.body.classList.remove("locked");
+}
+
+window.addEventListener("load", () => {
+  const verified = localStorage.getItem("human_verified");
+  const expiry = localStorage.getItem("human_verified_expiry");
+
+  if (verified === "true" && expiry && Date.now() < expiry) {
+    document.getElementById("captcha-box").style.display = "none";
+    document.body.classList.remove("locked");
+  } else {
+    localStorage.removeItem("human_verified");
+    localStorage.removeItem("human_verified_expiry");
+  }
+});
 </script>
 
 </body>
