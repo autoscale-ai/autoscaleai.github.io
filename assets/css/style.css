@@ -1642,3 +1642,6 @@ section .btn {
   background: #00aeff;
   color: #000000 !important;
 }
+.locked {
+  overflow: hidden;
+}
