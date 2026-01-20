@@ -704,18 +704,20 @@ window.addEventListener("load", () => {
 });
 </script>
 <script>
-// Check verification on page load
 window.addEventListener("load", () => {
   const verified = localStorage.getItem("human_verified");
   const expiry = localStorage.getItem("human_verified_expiry");
 
   if (verified === "true" && expiry && Date.now() < expiry) {
-    document.getElementById("human-check").style.display = "none";
+    const humanCheck = document.getElementById("human-check");
+    if (humanCheck) humanCheck.style.display = "none";
   } else {
     localStorage.removeItem("human_verified");
     localStorage.removeItem("human_verified_expiry");
   }
 });
+</script>
+
 </script>
 
 </body>
